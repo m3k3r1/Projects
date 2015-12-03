@@ -1,3 +1,10 @@
 body h1{
-	border: 1px solid midnightblue 
-	};
+	text-align: center;
+	width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+	position: relative;
+	right: -450px;}
+p {
+	color: midnightblue;};
