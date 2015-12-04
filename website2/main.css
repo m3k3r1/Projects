@@ -1,14 +1,52 @@
+@keyframes background{
+	0%   {background-color: mediumspringgreen;}
+    25%  {background-color: mediumseagreen;}
+    50%  {background-color: mediumturquoise;}
+    100% {background-color: mediumblue;}}
+@keyframes border{
+	0%   {border: 20px solid navy;}
+    25%  {border: 20px solid teal;}
+    50%  {border: 20px solid green;}
+    100% {border: 20px solid darkgreen;}}
+
 body{
-	background-color: mediumspringgreen; 
-}
+	animation-name: background;
+    animation-duration: 4s;
+	animation-iteration-count:infinite;}
+	
 
 body h1{
 	text-align: center;
 	width: 300px;
-    padding: 25px;
-    border: 25px solid navy;
-    margin: 25px;
+    padding: 20px;
+	border-radius: 12px;
+    animation-name: border;
+    animation-duration: 4s;
+	animation-iteration-count:infinite;
+    margin: 20px;
 	position: relative;
 	right: -450px;}
-p {
-	color: midnightblue;};
+#holder{
+	height: auto;
+	width: 250px;
+	position: relative;
+	left: 10px;}
+#holder p{
+	border-left: 1px solid darkslategrey;
+	border-right: 1px solid darkslategrey;
+	border-bottom: 1px solid darkslategrey;
+	border-radius: 12px;
+	padding: 10px 15px;
+	margin:0;}
+#top{
+	width: 248px;
+	height: 30px;
+	border: 1px solid darkslategrey;
+	background-color: darkcyan;
+	border-radius: 12px;}
+#top h3{
+	 text-align: center;
+	 margin: 0;
+	 position: relative;
+	 top: 2px;}
+	 
