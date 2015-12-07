@@ -11,13 +11,19 @@
   left: 200px;
   z-index: 1;
   font-size: 30px;
-  color: #0d1949; }
+  color: black; }
+  
+  .toggle:checked + .page-wrapper .sidebar {
+    left: 0px; }
+
+#sidebar-toggle {
+  display: none; }
 
 .sidebar {
   position: fixed;
   top: 0;
   right: 0px;
-  bottom: 10px;
+  bottom: -190px;
   left: 0px;
   width: 120px;
   padding: 38px;
@@ -32,6 +38,6 @@ li {
   -webkit-font-smoothing: antialised;
   cursor: pointer; }
   li:hover {
-    color: white;}
+    color: white; }
 
 /*# sourceMappingURL=sidebar.css.map */

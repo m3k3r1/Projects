@@ -7,21 +7,29 @@
   <link href="images/icon.jpg" rel="shortcut icon"/>
   <link href="style/sidebar1.css"  media="all" rel="stylesheet"/>
 </head>
-<body>
-  <div class="page-wrapper">  
-    <a href="" class="toggle">&#9776</a>
-  <div class="main-content">
-    <h1>
-      <a href="home.html">V<span style="color: #0d1949;">e</span>nice</a>
-    </h1>
-  </div>
-  <div class="sidebar">
-    <ul>
-      <li>Home</a></li><!-- <a href="home.html"> -->
-      <li>Men</a></li><!-- <a href="men.html"> -->
-      <li>Women</a></li><!-- <a href="women.html"> -->
-      <li>Cart</a></li> <!-- <a href="login.html"> -->
-    </ul>
-  </div>
-  </div>    
-</html>
+<body class="menu">
+
+
+        <div class="main-content">
+                <h1><a href="home.html">V<span style="color: #0d1949;">e</span>nice</a></h1>
+                <p>Lorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metusLorem ipsum dolor sit amet, dui dolor porttitor diam, vel sed non. In metus
+        </div>
+
+        <a href="" class='toggle'>&#9776</a>
+        
+        <div class="sidebar">
+                <ul><li>Home</li>
+                <li>Men</a></li>
+                <li>Women</a></li>
+                <li>Cart</a></li></ul>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+                (function() {
+                        var body = $('body'); 
+                        $('.toggle').bind('click', function() {
+                        body.toggleClass('menu-open');
+                        return false;
+                        });
+                })();
+</script>
