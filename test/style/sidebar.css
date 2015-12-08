@@ -36,12 +36,6 @@
         background: #333;
         z-index: 0; }
 
-.sidebar
-.menu {
-        -webkit-transition: left 1.0s ease;
-        -moz-transition: left 1.0s ease;
-        transition: left 1.0s ease;
-}
 .sidebar {
         position: fixed;
         top: 0;

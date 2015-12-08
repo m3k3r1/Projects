@@ -1,3 +1,8 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;}
+
 body,
 html {
   height: 100%;}
@@ -64,9 +69,118 @@ body.index {
   color: black;
 }
 
+.img-grid__single {
+  float: left;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.img-grid__single:nth-child(2n) {
+  float: right;
+}
+
+.img-grid__single a {
+  color: black;
+  text-decoration: none;
+}
+
+.img-grid__single h1,
+.img-grid__single p {
+  margin: 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.img-grid__single img {
+  width: 300px;
+  height: 300px;
+}
+
+.product iframe {
+  width: 100%;
+  height: 417px;
+}
+
+.product header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product .product__title {
+  float: left;
+}
+
+.product .product__title * {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.product .product__title h2 {
+  font-size: 1rem;
+}
+
+.product header .buy-it {
+  float: right;
+}
+
+.product .meta {
+  font-style: italic;
+  font-size: .9rem;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.contact img {
+  height: 50px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.instagram-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.instagram-image p {
+  margin: .25rem 0 0;
+}
+
+.instagram-image a {
+  text-decoration: none;
+}
+
 .logo img {
   width: 100%;
 }
+
+/* ------------------------- */
 
 .clearfix:before,
 .clearfix:after {
