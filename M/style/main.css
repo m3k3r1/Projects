@@ -1,0 +1,23 @@
+/*FONTS*/
+@font-face{
+    font-family: SanFran;
+    src: url("fonts/System San Francisco Display Regular.ttf");}
+
+
+/*PAGE TITLE*/
+.title{
+    font-family: SanFran;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position:relative;
+    top: -40px;}
+
+img {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  left: 215px;
+  top: -40px}
+/*SIDEBAR*/
