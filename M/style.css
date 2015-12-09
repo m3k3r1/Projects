@@ -1,0 +1,52 @@
+@font-face {
+  font-family: SanFran;
+  src: url("fonts/System San Francisco Display Regular.ttf");}
+
+@font-face {
+    font-family: SanFranThin;
+    src: url("fonts/System San Francisco Display Thin.ttf");}
+
+body{
+  padding-left: 418px;
+  padding-top: 100px;}
+
+img{
+  weight: 600px;
+  height: 227px;}
+
+h1{
+  display: block;
+  font-family: SanFran;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 75px;
+  width: 508px;
+  height: 80px;
+  margin-bottom:16px;
+  margin-top: 16px;
+  position: relative;
+  left: -5px;
+  -webkit-font-smoothing: antialiased;}
+
+.main-nav{
+  display: inline-block;
+  height: 18px;
+  weight: 48px;}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  border-left: 3px solid black;
+  height: 18px;
+  weight: 48px;
+  padding-right: 42px;
+  padding-left: 42px;}
+
+a:hover {
+  color: #0d1949;}
