@@ -4,9 +4,29 @@
     <title> Login </title>
     <link href="HomemMulher.css" media="all" rel="stylesheet"/>
     <link href="images/icon.jpg" rel="shortcut icon"/>
+    <link href="Login.css" media="all" rel="stylesheet"/>
 </head>
 <body>
     <div class=title>
     <h1>V<span style="color: #0d1949;">e</span>nice</h1>
     </div>
+    <div class=login>
+    <form>
+        <div id=id>
+            <label for="username" class="uname" >Username</label>
+            <input id="username" name="username" required="required" type="text" placeholder="Your username here"/>
+        </div>
+        <div id=password>
+            <label for="password" class="pass" >Password</label>
+            <input id="password" name="password" required="required" type="password" placeholder="Your password here"/>
+        </div>
+        <div id="KeepLog">
+            <label for="loginkeeping">Keep me logged in</label>
+            <input type="checkbox" name="loginkeep" id="loginkeep" value="loginkeep" /> 
+        </div>
+        <div id="Submit">
+            <input type="submit" value="Login"/>
+        </div>
+    </div>
+    </form>
 </body>
