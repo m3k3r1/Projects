@@ -1,0 +1,34 @@
+header {
+  background: url(images/welcome1.jpg) top center; }
+
+.section1 {
+  background-color: white;
+  height: 750px; }
+
+h2 {
+  color: #0d1949;
+  text-align: center;
+  font-family: Ubuntu;
+  padding-top: 50px;
+  padding-bottom: 30px; }
+
+.thumbnail-container {
+  max-width: 100%;
+  height: 900px;
+  margin-left: 5%;
+  padding-bottom: 100px; }
+
+.thumbnail {
+  width: 16%;
+  height: 120px;
+  background: #ccc;
+  display: block;
+  float: left;
+  position: relative;
+  padding-top: 30%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=gallery.css.map */
