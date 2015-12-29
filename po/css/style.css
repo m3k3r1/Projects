@@ -13,6 +13,7 @@ article {
 
 .background {
   height: 600px;
+  width: 100%;
   background-image: url(images/slideshow/welcome1.jpg);
   background-size: cover;
   background-position: top center;
@@ -26,6 +27,20 @@ article {
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
-  margin-top: -50px; }
+  margin-top: -70px; }
+
+.large-window {
+  height: 640px;
+  background-image: url(images/model2.jpg);
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  margin-top: 100px;
+  border-radius: 50%; }
+
+form {
+  position: relative;
+  left: 25%;
+  width: 50%; }
 
 /*# sourceMappingURL=style.css.map */
