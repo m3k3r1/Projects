@@ -1,15 +1,29 @@
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  z-index: 2; }
 
 h1 {
   color: #ccc;
   font-weight: 300; }
 
-article {
-  padding: 100px 0;
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center; }
+.conteudo {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 400px; }
+  .conteudo article {
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2; }
+    .conteudo article img {
+      max-width: 100%; }
+
+header {
+  z-index: 2;
+  background: white; }
 
 .background {
   height: 600px;
@@ -17,7 +31,8 @@ article {
   background-image: url(images/slideshow/welcome1.jpg);
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  z-index: 3; }
 
 .logo {
   height: 100px;
@@ -38,9 +53,17 @@ article {
   margin-top: 100px;
   border-radius: 50%; }
 
-form {
-  position: relative;
-  left: 25%;
-  width: 50%; }
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: -65px;
+  width: 100%; }
+  footer .footer {
+    max-width: 640px;
+    margin: 0 auto; }
+  footer li {
+    list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

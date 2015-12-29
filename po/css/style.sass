@@ -1,17 +1,33 @@
 //Text
 body
   font-family: "Open Sans", sans-serif
+  background: white
+  z-index: 2
 h1
   color: #ccc
   font-weight: 300
 
-article
-  padding: 100px 0
-  max-width: 640px
-  margin: 0 auto
-  text-align: center
+.conteudo
+  position: relative
+  z-index: 2
+  background: white
+  margin-bottom: 400px
+
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+    z-index: 2
+
+    img
+      max-width: 100%
 
 //Background
+header
+  z-index: 2
+  background: white
+
 .background
   position:relative
   height: 600px
@@ -21,6 +37,8 @@ article
     size: cover
     position: top center
     attachment: fixed
+
+  z-index: 3
 //Logo
 .logo
   height: 100px
@@ -44,9 +62,19 @@ article
   margin-top: 100px
   border-radius: 50%
 
-//Form
 
-form
-  position: relative
-  left: 25%
-  width: 50%
+
+footer
+  background: black
+  color: white
+  padding: 40px 0
+  position: fixed
+  bottom: -65px
+  width: 100%
+  .footer
+    max-width: 640px
+    margin: 0 auto
+  a
+    color:white
+  li
+    list-style-type: none
