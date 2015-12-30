@@ -1,4 +1,0 @@
-@font-face {
-  font-family: "SanFran";
-  src: url('fonts/System San Francisco Display Regular.ttf');
-  }
