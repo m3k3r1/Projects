@@ -38,7 +38,7 @@
       <hr>
       <h1>Area de Cliente</h1>
       <hr>
-      <a href="logout.php">Estas logado clica aqui para fazer log out</a>
+      <a href="logout.php">Estas logado clica aqui para fazer log out</a><br/>
         <form action="mailto:blackbird@blackbird.com" method="GET">
           <div class="row">
             <div class="six columns">
