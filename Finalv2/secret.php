@@ -38,7 +38,8 @@
       <hr>
       <h1>Area de Cliente</h1>
       <hr>
-      <form action="mailto:blackbird@blackbird.com" method="GET">
+      <a href="logout.php">Estas logado clica aqui para fazer log out</a>
+        <form action="mailto:blackbird@blackbird.com" method="GET">
           <div class="row">
             <div class="six columns">
             <label for="Nome">Nome</label>
@@ -58,9 +59,9 @@
             <div class="six columns">
               <label for="exampleRecipientInput">Assunto</label>
               <select class="u-full-width" id="exampleRecipientInput">
-                <option value="Option 1">Questoes</option>
-                <option value="Option 2">Questoes</option>
-                <option value="Option 3">Questoes</option>
+                <option value="Option 1">Apoio Comercial</option>
+                <option value="Option 2">Apoio Tecnico</option>
+                <option value="Option 3">Outras Questoes</option>
               </select>
             </div>
           </div>
