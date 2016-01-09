@@ -38,8 +38,8 @@
             unset($row['salt']); 
             unset($row['password']); 
             $_SESSION['user'] = $row;  
-            header("Location: secret.php"); 
-            die("Redirecting to: secret.php"); 
+            header("Location: Secret.php"); 
+            die("Redirecting to: Secret.php"); 
         } 
         else{ 
             print("Login Failed."); 

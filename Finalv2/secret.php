@@ -3,7 +3,7 @@
     if(empty($_SESSION['user'])) 
     {
         header("Location: PLog.html");
-        die("Redirecting to index.php"); 
+        die("Redirecting to Index.php"); 
     }
 ?>
 
