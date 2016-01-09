@@ -83,7 +83,7 @@
           </div>
           <br>
           <label for="Mensagem">Mensagem</label>
-          <textarea class="u-full-width" placeholder="Ola " id="exampleMessage"></textarea>
+          <textarea class="u-full-width" placeholder="Deixa aqui a tua sugestao/questao " id="exampleMessage"></textarea>
           <input class="button-primary" value="Enviar" type="submit">
         </form>
     </article>
