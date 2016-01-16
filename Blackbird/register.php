@@ -70,8 +70,8 @@
             $result = $stmt->execute($query_params); 
         } 
         catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
-        header("Location: Index.php"); 
-        die("Redirecting to Index.php"); 
+        header("Location: index.php"); 
+        die("Redirecting to index.php"); 
     } 
 ?>
 <!DOCTYPE html>
@@ -90,9 +90,9 @@
   <body>
     <nav>
       <ul>
-        <li><a href="Index.php">Login</a></li>
+        <li><a href="index.php">Login</a></li>
         <li><a href="register.php">Registo</a></li>
-        <li><a href="Secret.php">Area Cliente</a></li>
+        <li><a href="secret.php">Area Cliente</a></li>
         <li><a href="about.html">Sobre Nos</a></li>
         <li><a href="women.html">Mulher</a></li>
         <li><a href="men.html">Homem</a></li>

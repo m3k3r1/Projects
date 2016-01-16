@@ -3,7 +3,7 @@
     if(empty($_SESSION['user'])) 
     {
         header("Location: PLog.html");
-        die("Redirecting to Index.php"); 
+        die("Redirecting to index.php"); 
     }
 ?>
 
@@ -22,9 +22,9 @@
   <body>
     <nav>
       <ul>
-        <li><a href="Index.php">Login</a></li>
-        <li><a href="Register.php">Registo</a></li>
-        <li><a href="Secret.php">Area Cliente</a></li>
+        <li><a href="index.php">Login</a></li>
+        <li><a href="register.php">Registo</a></li>
+        <li><a href="secret.php">Area Cliente</a></li>
         <li><a href="about.html">Sobre Nos</a></li>
         <li><a href="women.html">Mulher</a></li>
         <li><a href="men.html">Homem</a></li>

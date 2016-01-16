@@ -11,10 +11,21 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/functions.js"></script>
     <script>
-        funcion auth(form) {
-          var user = from.user.value;
-          alert ("You typed: " + TestVar);
-        }
+    function auth (formulario) {
+      var isValid = null;
+      isValid = formulario.checkValidity();
+      if(isValid == false) {
+          return false;}
+
+      var user = formulario.user.value;
+      var pass = formulario.pass.value;
+
+      if (user == 'Miguel' && pass == 'root'){
+        alert('Defesa');
+      }
+
+      console.log('user');
+    };
     </script>
   </head>
   <body>
@@ -37,13 +48,13 @@
       <h1>Log In</h1>
       <hr>
     <form NAME= "validation" ACTION="" METHOD="POST">
-                    Username:<br />
-                    <input  class="user" type="text" name="username"/>
-                    <br /><br />
-                    Password:<br />
-                    <input class="pass" type="password" name="password"/>
-                    <br /><br />
-                    <input type="submit" class="btn btn-info" value="Login" />
+          <label for="user">Username:</label><br />
+      <input  class="user" name="user" type="text" name="username"/>
+      <br /><br />
+        <label for="pass">Password:<label><br />
+        <input class="pass"  name="pass" type="password" name="password"/>
+      <br /><br />
+      <input onclick="auth(this.form)" type="submit">
                 </form>
     </article>
     <footer>
