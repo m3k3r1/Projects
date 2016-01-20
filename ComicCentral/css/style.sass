@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon'
+@import 'fonts/fonts'
 
 html
   background:
@@ -9,7 +10,7 @@ html
     attachment: fixed
 
 .content
-  padding-top: 5%
+  margin-top: 5%
 article
   background-color: #ffffff
   border-left: solid black 10px
@@ -22,7 +23,7 @@ article
 //SIDEBAR
 nav
   position: relative
-  z-index: 0
+  z-index: 1
   .sidebar
     width: 120px
     padding: 30px
@@ -39,3 +40,20 @@ nav
         font-family: sans-serif
     .first-item
       padding-top: 100%
+
+//Extra Space
+.space
+  position: absolute
+  height: 250px
+  width: 100%
+
+
+// Counter
+
+.counter
+  background-color: #000000
+  height: 180px
+  width: 95%
+  position: fixed
+  bottom: 20px
+  z-index: 0

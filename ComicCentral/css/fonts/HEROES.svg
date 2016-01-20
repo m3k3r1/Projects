@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20110222 at Thu Jun 30 10:07:41 2011
+ By www-data
+Copyright [c] 2011 by SpideRaY. All rights reserved.
+</metadata>
+<defs>
+<font id="HEROES" horiz-adv-x="558" >
+  <font-face 
+    font-family="HEROES"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="800"
+    descent="-200"
+    bbox="-22 -46 774 874"
+    underline-thickness="0"
+    underline-position="0"
+  />
+    <missing-glyph />
+    <glyph glyph-name="_d_50" 
+d="M512 874c41 -19 51 -64 53 -111c0 -140 -49 -381 -112 -558c-83 -130 -156 -195 -217 -195c-155 0 -239 53 -254 159l-4 95l6 32l14 11c28 0 37 -8 44 -138c17 -24 32 -36 45 -36c96 0 204 30 210 63c10 0 37 51 81 154l32 202l22 79l-2 5l6 12l42 199c4 18 15 27 34 27z
+" />
+    <glyph glyph-name="_d_83" horiz-adv-x="805" 
+d="M393 840c61 -20 92 -63 92 -129l-14 -106c56 -300 65 -302 95 -302c8 0 37 83 86 249c9 15 28 95 58 241l21 18c25 0 35 -46 43 -196c0 -125 -48 -291 -143 -498c0 -30 -22 -59 -65 -87h-3c-27 21 -66 80 -118 178c-24 66 -30 66 -57 66c-9 0 -33 -62 -72 -186l-83 -124
+l-14 -10c-36 0 -60 42 -60 102l14 80c0 36 -24 98 -71 187c-83 275 -98 341 -98 396c0 7 8 14 25 21c39 0 78 -57 117 -172c55 -107 86 -161 92 -164h17c8 3 32 62 73 178c25 82 41 165 48 248z" />
+    <glyph glyph-name="_d_84" horiz-adv-x="623" 
+d="M545 871h17c6 0 9 -4 9 -13c0 -50 -45 -155 -135 -315l-52 -123c0 -15 52 -104 156 -266c0 -22 23 -60 70 -115l8 -40c-5 -14 -10 -21 -17 -22c-62 0 -121 35 -177 106c-25 16 -64 59 -118 129c-36 0 -58 -15 -87 -116c-9 -14 -19 -49 -30 -106c-10 -9 -22 -13 -35 -13
+c-43 0 -65 19 -65 57c0 24 33 99 100 226l13 58c0 30 -3 44 -121 204c-46 81 -69 132 -69 155c0 68 27 88 121 88c47 -37 80 -77 100 -118c31 -59 53 -81 77 -81c42 43 80 102 114 177c31 31 60 70 89 119z" />
+  </font>
+</defs></svg>
