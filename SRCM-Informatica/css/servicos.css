@@ -1,0 +1,56 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/1.jpeg");
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  background-color: white;
+  height: 30px;
+  z-index: 10;
+  box-shadow: 0 2px 2px -2px gray; }
+  nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    padding-right: 5px;
+    padding-top: 3px; }
+    nav li.first-element {
+      padding-left: 10px; }
+    nav li a {
+      text-decoration: none;
+      color: black; }
+    nav li:hover {
+      font-weight: bold;
+      cursor: pointer; }
+
+h1 {
+  color: #ccc;
+  font-weight: 300; }
+
+.title {
+  padding-top: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 100px; }
+
+article {
+  position: relative;
+  padding: 100px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 5; }
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: white; }
+
+/*# sourceMappingURL=servicos.css.map */

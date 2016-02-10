@@ -1,0 +1,66 @@
+header
+  height: 400px
+  width: 100%
+  background:
+    image: url('../images/4.jpg')
+    position: bottom center
+    attachment: fixed
+
+//Barra
+nav
+  position: fixed
+  width: 100%
+  top: 0px
+  text-align: center
+  background-color: white
+  height: 30px
+  z-index: 10
+  box-shadow: 0 2px 2px -2px gray
+
+  li
+    &.first-element
+      padding-left: 10px
+    display: inline-block
+    text-transform: uppercase
+    color: black
+    padding-right: 5px
+    padding-top: 3px
+    a
+      text-decoration:  none
+      color: black
+    &:hover
+      font-weight: bold
+      cursor: pointer
+
+h1
+  color: #ccc
+  font-weight: 300
+.title
+  padding-top: 40px
+  color: white
+  font-weight: bold
+  font-size: 100px
+
+article
+  position: relative
+  padding: 100px 0
+  max-width: 640px
+  margin: 0 auto
+  text-align: center
+  z-index: 5
+
+.showcase
+  background-color: rgba(0, 31, 63, 1)
+  padding-left: 5%
+  img
+    padding-top: 30px
+    opacity: 0.8
+    &:hover
+      opacity: 1
+  .element
+    margin-left: 150px
+
+footer
+  background-color: black
+  text-align: center
+  color: white

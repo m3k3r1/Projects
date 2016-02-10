@@ -1,0 +1,46 @@
+header img {
+  width: 100%; }
+
+nav {
+  margin-top: 20px;
+  background-color: white;
+  position: relative;
+  left: 40%;
+  height: 33px; }
+  nav:hover {
+    left: 39%;
+    cursor: pointer; }
+  nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    padding-right: 5px;
+    padding-top: 3px; }
+    nav li.first-element {
+      padding-left: 10px; }
+    nav li a {
+      text-decoration: none;
+      color: black; }
+    nav li:hover {
+      font-weight: bold;
+      cursor: pointer; }
+
+.banner {
+  background-color: white;
+  position: relative;
+  left: 50%;
+  bottom: -300px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  width: auto; }
+  .banner:hover {
+    left: 48%; }
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin-top: 40%; }
+
+/*# sourceMappingURL=style.css.map */

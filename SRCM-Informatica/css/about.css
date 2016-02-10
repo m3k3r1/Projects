@@ -1,0 +1,66 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/4.jpg");
+  background-position: bottom center;
+  background-attachment: fixed; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  background-color: white;
+  height: 30px;
+  z-index: 10;
+  box-shadow: 0 2px 2px -2px gray; }
+  nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    padding-right: 5px;
+    padding-top: 3px; }
+    nav li.first-element {
+      padding-left: 10px; }
+    nav li a {
+      text-decoration: none;
+      color: black; }
+    nav li:hover {
+      font-weight: bold;
+      cursor: pointer; }
+
+h1 {
+  color: #ccc;
+  font-weight: 300; }
+
+.title {
+  padding-top: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 100px; }
+
+article {
+  position: relative;
+  padding: 100px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 5; }
+
+.showcase {
+  background-color: #001f3f;
+  padding-left: 5%; }
+  .showcase img {
+    padding-top: 30px;
+    opacity: 0.8; }
+    .showcase img:hover {
+      opacity: 1; }
+  .showcase .element {
+    margin-left: 150px; }
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: white; }
+
+/*# sourceMappingURL=about.css.map */
