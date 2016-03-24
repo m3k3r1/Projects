@@ -1,25 +1,31 @@
 header
-  height: 400px
+  position: relative
+  z-index: 0
+  height: 270px
   width: 100%
   background:
-    image: url('../images/1.jpeg')
-    position: top center
+    image: url('../images/2.jpg')
+    position: center left
     size: cover
     attachment: fixed
-
 //Barra
 nav
   position: fixed
   width: 100%
   top: 0px
   text-align: center
-  background-color: white
+  background-color: #FAFAFA
   height: 30px
   z-index: 10
-  box-shadow: 0 2px 2px -2px gray
+  box-shadow: 0 3px 3px -3px gray
+  height: 60px
+  padding-top: 10px
+  ul
+    position: relative
+    left: -4%
   li
     &.first-element
-      padding-left: 10px
+      padding-left: -99px
     display: inline-block
     text-transform: uppercase
     color: black
@@ -31,16 +37,31 @@ nav
     &:hover
       font-weight: bold
       cursor: pointer
+nav
+  .contacts
+    margin-top: -62px
+    margin-right: 10px
+    float: right
+    button
+      z-index: 10
+      position: relative
 
 h1
   color: #ccc
   font-weight: 300
 .title
-  padding-top: 40px
+  padding-top: 10px
   color: white
   font-weight: bold
   font-size: 100px
+  z-index: 0
 
+.logo
+  z-index: 10
+  position: relative
+  float: left
+  left: 10px
+  top: -10px
 article
   position: relative
   padding: 100px 0
@@ -48,7 +69,23 @@ article
   margin: 0 auto
   text-align: center
   z-index: 5
+  &.serv
+  height: -110px
 footer
   background-color: black
   text-align: center
   color: white
+  a
+    text-decoration: none
+
+.container1
+  margin-top: -90px
+  position: relative
+  z-index: 5
+  width: 100%
+  padding-top: 50px
+  padding-bottom: 50px
+  background:
+    image: url('../images/serv.jpg')
+    size: cover
+    attachment: fixed

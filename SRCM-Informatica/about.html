@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SRCM</title>
+    <title>Sobre</title>
+    <meta name="keywords" content="Informática, Maia, Hardware, Software, Serviços" />
+    <meta name="description" content="Fornecedor de Serviços Informática, Manutenção, Reparação, Hardware, Software na zona da Maia Porto Portugal" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/about.css">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="semantic/dist/semantic.min.js"></script>
   <header>
     <article >
       <h1 class="title">SOBRE</h1>
@@ -16,52 +20,41 @@
   </header>
   <body>
     <nav>
+      <div class="logo" >
+        <a href="index.html"><img style="height: 56px;" src="images/logo.png"/></a>
+      </div>
       <ul>
         <li class="first-element"><a href="index.html">Home</li>
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="localizacao.html">Localização</a></li>
         <li><a href="about.html">Sobre</a></li>
       </ul>
+      <div class="contacts">
+        <button class="button button-primary" id="show1" onclick="$('.ui.modal').modal('show');">Contacte-nos</button>
+        <div class="ui modal">
+          <i class="close icon"></i>
+          <div class="image content">
+            <div class="image" style="margin-left: 45%;"><a href="https://www.facebook.com/srcminformatica"><img height="30" width= "30"src="images/fbk.png"/></a></div>
+            <div class="image" style="padding-left:10px;"><a href="https://twitter.com/srcminformatica"><img height="30" width= "30"src="images/twt.png"/></a></div>
+          </div>
+          <div class="description" style="padding:20px;font-size:18px;text-align:center;">
+            +351 919 502 111 <br><br>
+            geral@srcminformatica.com
+          </div>
+        </div>
+      </div>
     </nav>
     <article >
       <hr>
-      A srcm surge em 2010, com a preocupação de satisfazer todo o tipo de empresas no âmbito das Tecnologias de Informação e desenvolvimento de programas específicos para as diversas áreas de negócio principalmente na indústria e na saúde. Desenvolvemos também programas de recolha de dados direta e indireta de diversos equipamentos indústriais tais como: temperaturas, contadores peças produzidas, consumo energia/gaz, tempos de produção, etc.
-      Contamos com uma equipa de programadores, com experiencia superior a 20 anos, nas diversas áreas da automação industrial e gestão.
-      Temos diversas soluções das quais destacamos na área da restauração com aplicações do Grupo PIE, na área de Gestão de Assiduidade com a aplicação InnuxTime e nas restantes áreas com as aplicações PHC CS (Gestão e ERP, Financeira, Recursos Humanos, Logística e Distribuição, Suporte Técnico, CRM, Frota Automóvel, Gestão de Equipas)
-      A aposta na personalização dos projectos, a utilização de meios tecnologicamente avançados e o acompanhamento do cliente, são as características chave que definem a filosofia da empresa e reflectem os seus objectivos: exceder as expectativas com soluções inovadoras.
-      Temos também disponível uma equipa de desenvolvimento de websites dos quais destacamos os seguintes projetos:
-      </article>
-      <div class="showcase">
-        <div class="row">
-          <div class="columns three">
-            <a href="http://www.transportesjdc.pt"><img src="images/projects/thumbnail1.png"/></a>
-          </div>
-          <div class="columns three">
-            <a href="http://www.sisma.pt"><img src="images/projects/thumbnail2.png"/></a>
-          </div>
-          <div class="columns three">
-            <a href="http://www.cmleca.pt"><img src="images/projects/thumbnail3.png"/></a>
-          </div>
-          <div class="columns three">
-            <a href="http://www.lobometal.com"><img src="images/projects/thumbnail4.png"/></a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="columns three element">
-            <a href="http://www.calhasteixeira.pt"><img src="images/projects/thumbnail5.png"/></a>
-          </div>
-          <div class="columns three">
-            <a href="http://www.transportesgainhos.pt"><img src="images/projects/thumbnail6.png"/></a>
-          </div>
-          <div class="columns three">
-            <a href="http://www.vidrocurvo.pt"><img src="images/projects/thumbnail7.png"/></a>
-          </div>
-        </div>
-        <hr>
-      </div>
+      <p>&nbsp&nbspA srcm surge em 2010, com a preocupação de satisfazer todo o tipo de empresas no âmbito das Tecnologias de Informação e desenvolvimento de programas específicos para as diversas áreas de negócio principalmente na <strong>indústria</strong> e na <strong>saúde</strong>. Desenvolvemos também <strong>programas de recolha de dados direta e indireta</strong> de diversos equipamentos indústriais tais como: <strong>temperaturas, contadores peças produzidas, consumo energia/gaz, tempos de produção, etc.</strong></p>
+      <p>&nbsp&nbspContamos com uma <strong>equipa de programadores, com experiencia superior a 20 anos</strong>, nas diversas áreas da automação industrial e gestão.</p>
+      <p>&nbsp&nbspTemos diversas soluções das quais destacamos na área da restauração com aplicações do <strong>Grupo PIE</strong>, na área de Gestão de Assiduidade com a aplicação <strong>InnuxTime</strong> e nas restantes áreas com as aplicações <strong>PHC CS</strong> (Gestão e ERP, Financeira, Recursos Humanos, Logística e Distribuição, Suporte Técnico, CRM, Frota Automóvel, Gestão de Equipas)</p>
+      <p>&nbsp&nbspA aposta na personalização dos projectos, a utilização de meios tecnologicamente avançados e o acompanhamento do cliente, são as características chave que definem a filosofia da empresa e reflectem os seus objectivos: <strong>exceder as expectativas com soluções inovadoras.</strong></p>
+      <hr>
+  </article>
   </body>
   <footer>
     Copyright © 2014 SRCM - Informática. All Rights Reserved.<br>
-    Designed by Miguel Dias
+    Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a>
   </footer>
 </html>

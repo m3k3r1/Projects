@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Central Comics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="semantic/dist/semantic.min.js"></script>
+</head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <div class="sidebar">
+        <ul>
+          <li class="first-item"><a href="index.html">Home</a></li>
+          <li><a href="atividades.html">Atividades</li></a>
+          <li><a href="programa.html">Expositores</li></a>
+          <li><a href="concursos.html">Concursos</li></a>
+          <li><a href="bilheteira.html">Bilheteira</li></a>
+
+        </ul>
+        <div class="face">
+          <a href="#"><img height="30" width= "30"src="images/fbk.png"/></a>
+        </div>
+        <div class="credits">
+
+            Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a><br>
+
+      </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="row">
+        <div class="eight columns">
+          <article style="text-align:center; margin-bottom:10px;">
+            <strong style="font-size:60px;">BILHETEIRA</strong>
+          </article>
+        </div>
+        </div>
+
+      <div class="row">
+        <div class="eight columns">
+          <article>
+            <p>
+              <strong>Bilheteira On-Line (até 15 de Julho):</strong><br> <br>
+
+              Para os adquirir preencha o formulário ao lado.
+              Em caso de compra de mais do que um bilhete, tem de deixar o nome de todos os titulares dos bilhetes. No caso de deixar apenas o nome de uma pessoa, só esta é que poderá levantar todos os bilhetes.
+              Os bilhetes serão pagos através de transferência bancária. O IBAN será enviado por e-mail após submeter o formulário.<br><br>
+
+              Bilhete de 1 Dia: 3€ <br>
+              Bilhete de 2 Dias: 5€ <br><br>
+
+              Após pagamento, será enviado por e-mail o comprovativo válido que terá de o trocar pelo ingresso na bilheteira do evento, acompanhado por um documento de identificação.
+              Não são aceites trocas e/ou devoluções.<br>
+
+              O auditório tem uma lotação limitada. Reservamos o direito a, caso a procura para assistir aos painéis supere a sua lotação, de criar uma reserva antecipada de lugar.<br>
+
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="eight columns">
+          <article >
+            <form style="margin-bottom:250px;">
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Your email</label>
+      <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email">
+    </div>
+    <div class="six columns">
+      <label for="exampleRecipientInput">Reason for contacting</label>
+      <select class="u-full-width" id="exampleRecipientInput">
+        <option value="Option 1">Questions</option>
+        <option value="Option 2">Admiration</option>
+        <option value="Option 3">Can I get your number?</option>
+      </select>
+    </div>
+  </div>
+  <label for="exampleMessage">Message</label>
+  <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+  <input class="button-primary" value="Submit" type="submit">
+</form>
+          </article>
+      </div>
+
+      <div class="space"></div>
+      <div class="space"></div><div class="space"></div>
+      <div class="counter">
+        <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Dias</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Horas</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutos</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Segundos</div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+  </body>
+</html>
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date('23 07 2016');
+    initializeClock('clockdiv', deadline);
+</script>

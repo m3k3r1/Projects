@@ -3,46 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>SRCM</title>
+    <meta name="keywords" content="Informática, Maia, Hardware, Software, Serviços" />
+    <meta name="description" content="Fornecedor de Serviços Informática, Manutenção, Reparação, Hardware, Software na zona da Maia Porto Portugal" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/vegas/vegas.min.css">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/vegas/vegas.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="semantic/dist/semantic.min.js"></script>
   </head>
   <body>
     <nav>
+      <div class="logo1" >
+        <a href="index.html"><img style="height: 56px;" src="images/logo.png"/></a>
+      </div>
       <ul>
         <li class="first-element"><a href="index.html">Home</li>
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="localizacao.html">Localização</a></li>
         <li><a href="about.html">Sobre</a></li>
       </ul>
+      <div class="contacts">
+        <button class="button button-primary" id="show1" onclick="$('.ui.modal').modal('show');">Contacte-nos</button>
+        <div class="ui modal">
+          <i class="close icon"></i>
+          <div class="image content">
+            <div class="image" style="margin-left: 45%;"><a href="https://www.facebook.com/srcminformatica"><img height="30" width= "30"src="images/fbk.png"/></a></div>
+            <div class="image" style="padding-left:10px;"><a href="https://twitter.com/srcminformatica"><img height="30" width= "30"src="images/twt.png"/></a></div>
+          </div>
+          <div class="description" style="padding:20px;font-size:18px;text-align:center;">
+              +351 919 502 111 <br><br>
+              geral@srcminformatica.com
+          </div>
+        </div>
+      </div>
     </nav>
     <script>
       $("#example, body").vegas({
         timer: false,
+        delay:	2500,
         slides: [
-          { src: "images/1.jpeg" },
-          { src: "images/2.jpg" },
-          { src: "images/3.jpg" },
-          { src: "images/4.jpg" }
+          { src: "images/11.jpg" },
+          { src: "images/88.jpg" },
+          { src: "images/33.jpg" },
+          { src: "images/44.jpg" },
+          { src: "images/77.jpg" },
+          { src: "images/55.jpg" },
+          { src: "images/66.jpg" }
         ],
         transition: 'slideLeft',
-        animation: 'kenburnsDownLeft',
-        overlay: '/js/vegas/overlays/08.png'
       });
     </script>
-    </body>
-    <div class="banner">
-      <h1>Material Informatico</h1>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br>
-      nisi ut aliquip ex ea commodo consequat.
-    </div>
-    <footer>
-      Copyright © 2014 SRCM - Informática. All Rights Reserved.<br>
-      Designed by Miguel Dias
-    </footer>
+  </body>
+  <footer>
+    <p>
+    Copyright © 2014 SRCM - Informática. All Rights Reserved.<br>
+    Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a></p>
+  </footer>
 </html>

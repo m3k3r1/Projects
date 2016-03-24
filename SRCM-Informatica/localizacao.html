@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SRCM</title>
+    <title>Localização</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Informática, Maia, Hardware, Software, Serviços" />
+    <meta name="description" content="Fornecedor de Serviços Informática, Manutenção, Reparação, Hardware, Software na zona da Maia Porto Portugal" />
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/localizacao.css">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="semantic/dist/semantic.min.js"></script>
   <header>
     <article >
       <h1 class="title">LOCALIZAÇÃO</h1>
@@ -16,12 +20,29 @@
   </header>
   <body>
     <nav>
+      <div class="logo" >
+        <a href="index.html"><img style="height: 56px;" src="images/logo.png"/></a>
+      </div>
       <ul>
         <li class="first-element"><a href="index.html">Home</li>
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="localizacao.html">Localização</a></li>
         <li><a href="about.html">Sobre</a></li>
       </ul>
+      <div class="contacts">
+        <button class="button button-primary" id="show1" onclick="$('.ui.modal').modal('show');">Contacte-nos</button>
+        <div class="ui modal">
+          <i class="close icon"></i>
+          <div class="image content">
+            <div class="image" style="margin-left: 45%;"><a href="https://www.facebook.com/srcminformatica"><img height="30" width= "30"src="images/fbk.png"/></a></div>
+            <div class="image" style="padding-left:10px;"><a href="https://twitter.com/srcminformatica"><img height="30" width= "30"src="images/twt.png"/></a></div>
+          </div>
+          <div class="description" style="padding:20px;font-size:18px;text-align:center;">
+            +351 919 502 111 <br><br>
+            geral@srcminformatica.com
+          </div>
+        </div>
+      </div>
     </nav>
     <article >
       <hr>
@@ -35,6 +56,6 @@
   </body>
   <footer>
     Copyright © 2014 SRCM - Informática. All Rights Reserved.<br>
-    Designed by Miguel Dias
+    Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a>
   </footer>
 </html>

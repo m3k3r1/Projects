@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Central Comics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <div class="sidebar">
+        <ul>
+          <li class="first-item"><a href="index.html">Home</a></li>
+          <li><a href="atividades.html">Atividades</li></a>
+          <li><a href="programa.html">Expositores</li></a>
+          <li><a href="concursos.html">Concursos</li></a>
+          <li><a href="bilheteira.html">Bilheteira</li></a>
+        </ul>
+        <div class="face">
+          <a href="#"><img height="30" width= "30"src="images/fbk.png"/></a>
+        </div>
+        <div class="credits">
+
+            Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a><br>
+
+      </div>
+      </div>
+
+    </nav>
+    <div class="content">
+
+
+
+      <div class="row">
+        <div class="eight columns">
+          <article style="text-align:center; margin-bottom:10px;">
+            <strong style="font-size:60px;">OFICINA</strong>
+          </article>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="three columns">
+          <article >
+            <p >
+              <strong>Oficina de Cosplay </strong> <br><br>
+              O Central Comics Fest vai contar, mais uma vez, com a presença da fantástica Cosplayer Portuguesa
+              Sofia (Sophie ART), a qual irá, como regularmente nos nossos eventos, presentear-nos com o seu Workshop
+              de Cosplay. Se quer aprender mais algumas técnicas para assim melhorar os seus fatos, junte-se a nós
+              <br> <br>
+            </p>
+          </article>
+        </div>
+        <div class="five columns">
+          <article class="image5"></article>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="eight columns">
+          <article style="text-align:center; margin-bottom:10px;">
+            <strong style="font-size:60px;">PAINEIS</strong>
+          </article>
+        </div>
+        </div>
+        <div class="row">
+          <div class="five columns">
+            <article class="image6"></article>
+          </div>
+          <div class="three columns">
+            <article >
+              <p >
+                <strong>Cerimónia de Entrega - XIV Troféus Central Comics</strong> <br><br>
+                Os Troféus Central Comics são prémios atribuídos em reconhecimento de êxitos criativos no mercado português de banda desenhada e cartoon, com a particularidade – única em Portugal – da consagração ser conferida por uma entidade privada e segundo as preferências do grande público, resultante de votos on-line dos próprios leitores e profissionais do sector, após pré-selecção por paínel de júri composto por autores de BD e críticos especializados. Assiste à cerimónia de entrega destes emblemáticos prémios ao vivo!
+
+                <br> <br>
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight columns">
+            <article >
+              <p >
+                <strong>Apresentação do Projecto "Ziggy Brown e os felinos de Vénus; a Viagem de Autodescoberta" </strong> <br><br>
+                Uma manga português, com ilustrações de Ana Quirino.
+                Ziggy Brown, uma habitante especial do planeta Vénus que tem de viajar até à cidade invicta para salvar a sua vida e concretizar o seu grande amor.
+                <br> <br>
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight columns">
+            <article class="image7"></article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight columns">
+            <article style="text-align:center; margin-bottom:10px;">
+              <strong style="font-size:60px;">DEMONSTRAÇÕES</strong>
+            </article>
+          </div>
+          </div>
+          <div class="row">
+            <div class="two columns">
+              <article >
+                <p >
+                  <strong>Jogos de Tabuleiro</strong> <br><br><br>
+                  Entre no mundo dos Jogos de Tabuleiro. Aprenda e jogue gratuitamente nos mais fantásticos boardgames da actualidade. Não precisa de marcação, basta passar pela zona dedicada, puxar uma cadeira e divertir-se.
+                  <br> <br>
+                  <br> <br>
+
+                </p>
+              </article>
+            </div>
+            <div class="six columns">
+              <article class="image8"></article>
+            </div>
+          </div>
+      <div class="space"></div>
+      <div class="counter">
+        <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Dias</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Horas</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutos</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Segundos</div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date('23 07 2016');
+    initializeClock('clockdiv', deadline);
+</script>

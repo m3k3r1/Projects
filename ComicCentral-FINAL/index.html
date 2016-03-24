@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Central Comics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <div class="sidebar">
+        <ul>
+          <li class="first-item"><a href="index.html">Home</a></li>
+          <li><a href="atividades.html">Atividades</li></a>
+          <li><a href="programa.html">Expositores</li></a>
+          <li><a href="concursos.html">Concursos</li></a>
+          <li><a href="bilheteira.html">Bilheteira</li></a>
+        </ul>
+        <div class="face">
+          <a href="#"><img height="30" width= "30"src="images/fbk.png"/></a>
+        </div>
+        <div class="credits">
+
+            Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a><br>
+
+      </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="row">
+        <div class="eight columns">
+          <article class="banner"></article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="eight columns">
+          <article>
+            <p>
+              O portal Central Comics organiza mais um evento de cultura Pop, desta feita em Vila Nova da Gaia (na EB Manuel António Pina), nos dias 23 e 24 de Julho de 2016.
+              São vários os motivos para todos os fãs de banda desenhada, animação, cinema, TV e Jogos ficarem satisfeitos, pois vários concursos, actividades e espectáculos terão lugar nesta convenção.
+              De destacar a Eliminatória Portuguesa para o EuroCosplay 2016, os XIV Troféus Central Comics, o Concurso The King Of The Geeks, e ainda: Videojogos; TCG; Oficinas; Palestras; Convidados etc..
+              E vamos ter MUITAS OFERTAS! Muitos dos nossos visitantes não irão para casa de mãos a abanar! Vamos ter imensos prémios para oferecer: livros, pósters, Merchandise, etc. Podes multiplicar o valor gasto no bilhete em prémios! É mais uma questão de ficar atento do que de sorte!
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="space"></div>
+      <div class="counter">
+        <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Dias</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Horas</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutos</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Segundos</div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date('23 07 2016');
+    initializeClock('clockdiv', deadline);
+</script>

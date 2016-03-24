@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SRCM</title>
+    <title>Serviços</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Informática, Maia, Hardware, Software, Serviços" />
+    <meta name="description" content="Fornecedor de Serviços Informática, Manutenção, Reparação, Hardware, Software na zona da Maia Porto Portugal" />
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/servicos.css">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="semantic/dist/semantic.min.js"></script>
   <header>
     <article >
       <h1 class="title">SERVIÇOS</h1>
@@ -16,23 +20,187 @@
   </header>
   <body>
     <nav>
+      <div class="logo" >
+        <a href="index.html"><img style="height: 56px;" src="images/logo.png"/></a>
+      </div>
       <ul>
         <li class="first-element"><a href="index.html">Home</li>
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="localizacao.html">Localização</a></li>
         <li><a href="about.html">Sobre</a></li>
       </ul>
+      <div class="contacts">
+        <button class="button button-primary" id="show1" onclick="$('.contact.ui.modal').modal('show');">Contacte-nos</button>
+        <div class="contact ui modal">
+          <i class="close icon"></i>
+          <div class="image content">
+            <div class="image" style="margin-left: 45%;"><a href="https://www.facebook.com/srcminformatica"><img height="30" width= "30"src="images/fbk.png"/></a></div>
+            <div class="image" style="padding-left:10px;"><a href="https://twitter.com/srcminformatica"><img height="30" width= "30"src="images/twt.png"/></a></div>
+          </div>
+          <div class="description" style="padding:20px;font-size:18px;text-align:center;">
+            +351 919 502 111 <br><br>
+            geral@srcminformatica.com
+          </div>
+        </div>
+      </div>
     </nav>
-    <article >
-      <hr>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      <hr>
+    <article class="serv">
     </article>
+    </div>
+    <div class="container1">
+      <div class="container">
+          <div class="row">
+            <div style="margin-left:37%" class="columns  ">
+              <button  class="button button-primary"  onclick="$('.first.ui.modal').modal('show');">Software especifico</button>
+              <div class="first ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Software especifico</div>
+                <div class="image content">
+                  <div class="image"><img src="images/Servico3.png" style="margin-left:50%;" /></div>
+                </div>
+                <div class="description" style="padding:20px;font-size:16px;">
+                  -Especialistas em desenvolvimento de software nas áreas da industria e retalho com aplicações de recolha de dados direta e indireta de diversos equipamentos indústriais tais como: <strong>temperaturas, contadores peças produzidas, consumo energia/gaz, tempos de produção, etc.</strong><br>
+                  <br>-Criação de <strong>quadros de monitorização de produção</strong> (OEE) em ambiente web.<br>
+                  <br>-Desenvolvimento de software específica para <strong>IOS, Android e Windows</strong> para diversas áreas de negócio, nomeadamente na indústria, saúde, etc.
+                </div>
+              </div>
+            </div>
+            <div style="margin-left:30%" class="columns  ">
+              <button  class="button button-primary"  onclick="$('.example7.ui.modal').modal('show');">Automação industrial / Visão artificial</button>
+              <div class="example7 ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Automação industrial / Visão artificial</div>
+                <div class="image content">
+                  <div class="image"><img src="images/" style="margin-left:50%;" /></div>
+                </div>
+                <div class="description" style="padding:20px;font-size:16px;">
+                  DESCRIÇAO AQUI !!!!!!
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-left:25%"class="columns ">
+              <button class="button button-primary"  onclick="$('.example.ui.modal').modal('show');"> Equipamento informático e reparação de equipamentos</button>
+              <div class="example ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Equipamento informático e reparação de equipamentos</div>
+                <div class="image content">
+                  <div class="image"><img src="images/Servico1.png" style="margin-left:50%;" /></div>
+                </div>
+                <div class="description" style="padding:20px;font-size:16px;">Equipamentos das diversas marcas das quais destacamos a <strong>TSUNAMI, HP, Fujitsu-Siemens, ASUS, Toshiba, </strong>entre outras. Reparamos todo tipo de equipamentos informático.
+                </div>
+              </div>
+            </div>
+            <div style="margin-left:26%" class="columns ">
+              <button  class="button button-primary"  onclick="$('.example3.ui.modal').modal('show');"> Sistemas, Redes, VoIP, Infra-estruturas e Segurança</button>
+              <div class="example3 ui modal">
+                  <i class="close icon"></i>
+                  <div class="header" style="font-size:20px">Sistemas, Redes, VoIP, Infra-estruturas e Segurança</div>
+                  <div class="image content">
+                    <div class="image"><img src="images/Servico5.png" style="margin-left:50%;" /></div>
+                  </div>
+                  <div class="description" style="padding:20px;font-size:16px;">
+                    - Bases de dados (MySQL, SQL Server), Instalação, Administração, Migrações, Performance e Tunning, Troubleshooting;<br><br>
+                    - Redes computadores e segurança (Cisco, Linux), Desenho de soluções, Instalação, configuração e administração, Migrações e Troubleshooting;<br><br>
+                    - Acesso à Internet Gateways, DNS, Proxy, Anti-vírus;<br><br>
+                    - Interligação de empresas via VPN, a escritórios, filiais ou departamentos;<br><br>
+                    - Sistemas de Email (SMTP, IMAP, Webmail, Anti-vírus, Anti-spam);<br><br>
+                    - Assistência servidor e monitorização de sistemas e análise de logs de serviços WEB;<br><br>
+                    - Serviços de instalação das mais variadas tecnologias, Implementação de processos automáticos, Virtualização, Implementação de ferramentas de controlo de acessos, Projectos de Alta Disponibilidade e Desenho e implementação de Arquitecturas de Sistemas e outros serviços informática.<br>
+              </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+          <div style="margin-left:38%" class="columns ">
+            <button  class="button button-primary"  onclick="$('.example2.ui.modal').modal('show');">Software próprio </h1>
+            <div class="example2 ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Software próprio</div>
+                <div class="image content">
+                  <div class="image"><img src="images/Servico4.png" style="margin-left:50%;" /></div>
+                </div>
+                <div class="description" style="padding:20px;font-size:16px;">
+                  Temos disponível software próprio em diversas áreas das quais destacamos as seguintes:<br><br>
+                - Gestão comercial –  <span  class="button " onclick="$('.example10.ui.modal').modal('show');">FacturaGest</span>– Certificado pela AT nº: 0718/AT<br>
+                - Gestão produção – <strong onclick="$('.example3.ui.modal').modal('show');">ProducaoGest</strong><br>
+                - Gestão de projetos, CRM e consultores na área da consultadoria – <strong class="button " onclick="$('.example3.ui.modal').modal('show');">ProGest</strong><br>
+                - Gestão de artigos usados<br>
+                - Gestão de sócios<br>
+                - Gestão de Clinicas e Gabinetes Médicos - <strong class="button " onclick="$('.example3.ui.modal').modal('show');">MedicalGest</strong><br>
+                - Captura de imagens de Gastro e Ecografos com impressão em diversos tamanhos - <strong class="button " onclick="$('.example3.ui.modal').modal('show');">MedicalVideo</strong><br>
+              </div>
+            </div>
+          </div>
+          <div style="margin-left:35%" class="columns ">
+            <button  class="button button-primary"  onclick="$('.example1.ui.modal').modal('show');"> Software de diversas áreas </button>
+            <div class="example1 ui modal">
+              <i class="close icon"></i>
+              <div class="header" style="font-size:20px"> Software de diversas áreas </div>
+              <div class="image content"><div class="image"><img src="images/Servico2.png" style="margin-left:50%;" /></div></div>
+              <div class="description" style="padding:20px;font-size:16px;">Temos diversas soluções das quais destacamos na área da restauração com aplicações do <strong>Grupo PIE</strong>, na área de Gestão de Assiduidade com a aplicação <strong>InnuxTime</strong> e nas restantes áreas com as aplicações <strong>PHC CS</strong> (Gestão e ERP, Financeira, Recursos Humanos, Logística e Distribuição, Suporte Técnico, CRM, Frota Automóvel, Gestão de Equipas).</div>
+          </div>
+        </div>
+          <div style="margin-left:35%"class="columns ">
+            <button  class="button button-primary"  onclick="$('.example4.ui.modal').modal('show');">Sistemas de Vídeo Vigilância </button>
+              <div class="example4 ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Sistemas de Vídeo Vigilância</div>
+                <div class="image content">
+                  <div class="image"><img src="images/Servico6.png" style="margin-left:50%;" /></div>
+                </div>
+                <div class="description" style="padding:20px;font-size:16px;">
+                Instalação de sistemas de Vídeo Vigilância (CCTV):<br>
+                <br><strong>Mobilidade:</strong><br>
+                &nbspÉ possível gerir o sistema, eventos, gravações, utilizadores e aceder às imagens utilizando qualquer dispositivo (computador, tablet, smartphone), via Internet, através de uma ligação segura.</p>
+                <strong>Escalabilidade:</strong><br>
+                &nbspA flexibilidade desta solução permite uma fácil adaptação aos diversos cenários de segurança empresarial, sendo totalmente escalável quanto ao número de câmaras, utilizadores e espaço para armazenamento de imagens.</p>
+                <strong>Integração e alarmística:</strong><br>
+                &nbspPermite a integração com sistemas de análise inteligente de vídeo para deteção de movimento e sistemas de notificação de eventos e alarmes, por SMS, MMS e email.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last" style="margin-left:35%;">
+          <div class="row">
+          <div class="columns three">
+            <button class="button button-primary"  onclick="$('.example5.ui.modal').modal('show');">Desnvolvimento de websites</h1>
+              <div class="example5 ui modal">
+                <i class="close icon"></i>
+                <div class="header" style="font-size:20px">Desenvolvimento de websites</div>
+                <div class="description" style="padding:20px;font-size:16px;">Temos também disponível uma equipa de desenvolvimento de websites dos quais destacamos os seguintes projetos:</div>
+                <div class="image content">
+                  <div class="image" style="padding-left:30px;"><a href="http://www.transportesjdc.pt"><img src="images/projects/thumbnail1.png"/></a></div>
+                  <div class="image" style="padding-left:30px;"><a href="http://www.sisma.pt"><img src="images/projects/thumbnail2.png"/></a></div>
+                  <div class="image" style="padding-left:30px;;"><a href="http://www.cmleca.pt"><img src="images/projects/thumbnail3.png"/></a></div><br>
+                </div>
+                <div class="image content">
+                  <div class="image" style="padding-left:30px;"><a href="http://www.lobometal.com"><img src="images/projects/thumbnail4.png"/></a></div>
+                  <div class="image" style="padding-left:30px;;"><a href="http://www.calhasteixeira.pt"><img src="images/projects/thumbnail5.png"/></a></div>
+                  <div class="image" style="padding-left:30px;;"><a href="http://www.transportesgainhos.pt"><img src="images/projects/thumbnail6.png"/></a></div>
+                </div>
+                <div class="image content">
+                  <div class="image" style="padding-left:35%;"><a href="http://www.vidrocurvo.pt"><img src="images/projects/thumbnail7.png"/></a></div>
+                </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <article >
+    </article>
+    <div class="example10 ui modal">
+      <i class="close icon"></i>
+      <div class="header" style="font-size:20px"> FacturaGest </div>
+      <div class="image content"><div class="image"><img src="images/Servico2.png" style="margin-left:50%;" /></div></div>
+      <div class="description" style="padding:20px;font-size:16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<div>
+  </div>
+</div>
+</div>
   </body>
   <footer>
     Copyright © 2014 SRCM - Informática. All Rights Reserved.<br>
-    Designed by Miguel Dias
+    Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a>
   </footer>
 </html>

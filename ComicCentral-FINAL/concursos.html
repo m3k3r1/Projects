@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Central Comics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <div class="sidebar">
+        <ul>
+          <li class="first-item"><a href="index.html">Home</a></li>
+          <li><a href="atividades.html">Atividades</li></a>
+          <li><a href="programa.html">Expositores</li></a>
+          <li><a href="concursos.html">Concursos</li></a>
+          <li><a href="bilheteira.html">Bilheteira</li></a>
+
+        </ul>
+        <div class="face">
+          <a href="#"><img height="30" width= "30"src="images/fbk.png"/></a>
+        </div>
+        <div class="credits">
+
+            Designed by <a href="mailto:m3k3r1@gmail.com">Miguel Dias</a><br>
+
+      </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="row">
+        <div class="eight columns">
+          <article style="text-align:center; margin-bottom:10px;">
+            <strong style="font-size:60px;">CONCURSOS</strong>
+          </article>
+        </div>
+        </div>
+      <div class="row">
+        <div class="five columns">
+          <article class="image1"></article>
+        </div>
+        <div class="three columns">
+          <article>
+            <p>
+              <strong>THE KING OF THE GEEKS</strong><br><br>
+              Este é um concurso de cultura pop (BD, cinema, animação, jogos, TV) onde terá de superar várias fases para provar que é o supra-geek português!
+              Como não podia deixar de ser, o The King of The Geeks tem este ano uma nova prova surpresa, entre as já existentes! Prova que sabes tudo sobre a cultura nerd e ganha um fabuloso prémio!<br><br>
+              Inscrição gratuita  no local <br>
+              <strong>Prémio</strong>: Merchandise e livros variados <br>
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="three columns">
+          <article>
+            <p>
+              <strong>FOODMANIA</strong><br><br>
+              Como vem sendo hábito nos nossos eventos, à hora de almoço temos sempre um concurso de comida.
+              Não, não é uma versão de Masterchef, mas antes um concurso para ver quem come mais rapidamente! <br><br>
+              Inscrição gratuita  no local <br>
+                <strong>Prémio</strong>: Merchandise e livros variados <br>
+            </p>
+          </article>
+        </div>
+        <div class="five columns">
+          <article class="image2"></article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="five columns">
+          <article class="image3"></article>
+        </div>
+        <div class="three columns">
+          <article>
+            <p>
+              <strong>Homem de Ferro e Mulher Hulk - Concurso Braço de Ferro</strong><br><br>
+              Prova que és o/a mais forte num torneio de braço de ferro e ganha um fantástico prémio.
+              O concurso será dividido em masculino e feminino.<br><br>
+              Inscrição gratuita  no local <br>
+              <strong>Prémio</strong>: Merchandise e livros variados <br>
+              <br>
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <article>
+            <p>
+              <strong>EUROCOSPLAY</strong><br><br><br>
+              O evento MCM Expo, em Londres, é o berço da grande final do maior concurso de Cosplay da Europa, e o representante português irá sair do Central Comics Fest!
+              São mais de vinte países diferentes a entrar no palco britânico, ansiosos pela oportunidade de serem coroados campeões do EuroCosplay e este ano podes ser tu! Mas mesmo que não sejas, terás a oportunidade de participar numa das maiores convenções de cultura pop da Europa, com a viagem e estadia pagas pela organização!
+              <br><br><br>
+              Descarregue aqui o <strong>Regulamento! </strong>
+              <br><br><br><br>
+            </p>
+          </article>
+        </div>
+        <div class="four columns">
+          <article class="image4"></article>
+        </div>
+      </div>
+
+      <div class="space"></div>
+      <div class="counter">
+        <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Dias</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Horas</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutos</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Segundos</div>
+            </div>
+        </div>
+    </div>
+      <div class="space"></div>
+  </body>
+</html>
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date('23 07 2016');
+    initializeClock('clockdiv', deadline);
+</script>
