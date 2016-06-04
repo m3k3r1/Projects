@@ -2,21 +2,27 @@
 
 int main(int argc, char  *argv[]) {
   int game;
+  int BOT = FALSE;
+  int menu_op_2;
+  int menu_op;
 
-  do {
-    int menu_op = menu();
-    int menu_op_2;
-
-    switch(menu_op){
-      case 1: menu_op_2 = menu_start();
-                    int game = startGame();
-                    break;
-      case 2: puts("Falta funcao 2");
-                    break;
-      case 3: game == FALSE;
-                    break;
+  while (TRUE) {
+    menu_op =menu();
+    if (menu_op == EXIT)
+      return 0;
+    //else if ( menu_op_2 == 2)
+      //loadGame();
+    else{
+      menu_op_2 = menu_start();
+      switch (menu_op_2) {
+        case 1: game = startGame(BOT);
+                      break;
+        case 2: BOT = TRUE;
+                      int game = startGame(BOT);
+                      break;
+        case 3: game = FALSE;
+                      break;
+      }
     }
-
-  } while( game == TRUE );
-  return 0;
+  }
 }
