@@ -3,6 +3,7 @@
 int main(int argc, char  *argv[]) {
   int game;
   int BOT = FALSE;
+  int LOAD = FALSE;
   int menu_op_2;
   int menu_op;
 
@@ -10,15 +11,16 @@ int main(int argc, char  *argv[]) {
     menu_op =menu();
     if (menu_op == EXIT)
       return 0;
-    //else if ( menu_op_2 == 2)
-      //loadGame();
+    else if ( menu_op == 2){
+        LOAD = TRUE;
+        game = startGame(BOT, LOAD);}
     else{
       menu_op_2 = menu_start();
       switch (menu_op_2) {
-        case 1: game = startGame(BOT);
+        case 1: game = startGame(BOT,LOAD);
                       break;
         case 2: BOT = TRUE;
-                      int game = startGame(BOT);
+                      game = startGame(BOT,LOAD);
                       break;
         case 3: game = FALSE;
                       break;

@@ -1,6 +1,6 @@
-#include "comilao.h" 
+#include "comilao.h"
 
-int menu() {
+nt menu() {
   int menu_op;
   system(CLEAR);
 
@@ -39,25 +39,37 @@ int menu_start(){
   scanf("%d",&menu_op);
   return menu_op;
 }
-int startGame(int BOT){
+int startGame(int BOT, int LOAD){
   int nrows;
   int ncolumns;
+  FILE *load;
   int winner = FALSE;
   int player = 1;
+  int player1_bonus = 0;
+  int player2_bonus = 0;
   int nplays = 0;
   int number;
   char letter;
   int menu_op;
   pmov list = NULL;
-  pmov new_list = NULL;
+  pmov new_list  = NULL;
+  int **board;
 
   system(CLEAR);
   printf("\n\n\n\n");
 
-  getDimensions(&nrows,  &ncolumns);
-  int **board = allocMem(nrows, ncolumns);
+  getDimensions(&nrows, &ncolumns, LOAD, load, player, letter, number);
+  board = allocMem(nrows, ncolumns);
   makeBoard(board, nrows, ncolumns);
-  showBoard(board, nrows, ncolumns);
+
+  if (LOAD == TRUE){
+    makeBoard(board, nrows, ncolumns);
+    loadGame(player, letter, number,load,board,nrows,ncolumns);
+    showBoard(board, nrows, ncolumns);
+  }
+  else{
+    showBoard(board, nrows, ncolumns);
+  }
 
   while (winner == FALSE) {
     if(player > 2)
@@ -68,14 +80,14 @@ int startGame(int BOT){
 
       playMenu(&menu_op, player);
       switch (menu_op) {
-        case 1:  showBoard(board, nrows, ncolumns);
+        case 1:  showBoard( board, nrows, ncolumns);
                       do {
                         getPlay(&letter, &number, player);
                       } while(checkPlay(board, nrows,ncolumns,letter,number));
                       makePlay(board, nrows, ncolumns, letter, number, player);
                       nplays++;
-                      //makeLoad(player, letter, number);
                       savePlay(board, nrows ,ncolumns, letter, number, nplays,player);
+                      makeLoad(player,nrows, ncolumns,load,letter, number);
                       if(nplays == 1)
                         list = prevMoves(letter, number, player);
                       else
@@ -85,44 +97,79 @@ int startGame(int BOT){
                       player++;
                       break;
 
-        case 2:   free(board);
-                        nrows++;
-                        ncolumns++;
-
-                        board = allocMem(nrows , ncolumns);
-                        //loadGame
-                        //board = re_allocMem(board, nrows, ncolumns);
-                        makeBoard(board, nrows , ncolumns);
-                        showBoard(board, nrows, ncolumns);
-                        player++;
+        case 2:   if (ncolumns == 8 || nrows == 10)
+                          printf("Não dá para aumentar mais" );
+                        else if( player1_bonus == 1)
+                          printf("O jogador %d já usou a jogada bonus\n", player);
+                        else if( player2_bonus == 1)
+                          printf("O jogador %d já usou a jogada bonus\n", player);
+                        else{
+                          free(board);
+                          nrows++;
+                          ncolumns++;
+                          board = allocMem(nrows , ncolumns);
+                          makeBoard(board, nrows, ncolumns);
+                          loadGame(player, letter, number,load,board,nrows,ncolumns);
+                          showBoard(board, nrows, ncolumns);
+                          if (player == 1)
+                            player1_bonus++;
+                          else
+                            player2_bonus++;
+                          player++; }
                         break;
         case 3:   show_prevMoves(list);
                         break;
-        case 4: winner = TRUE;
+        case 4:
+                      winner = TRUE;
                       break;
       }
-
     }
   }
   free(board);
   return TRUE;
 }
-void getDimensions(int *rows, int *col) {
-  do {
-    printf("\tLinhas (colocar valor entre 4 e 8) > " );
-    scanf("%d", rows );
-  } while(*rows < 4 || *rows  > 8);
+void getDimensions(int *rows, int *columns, int LOAD, FILE *save, int player, char letter, int number) {
+  int tmp_rows = 0;
+  int tmp_columns = 0;
+  int tmp_player = 0;
 
-  do {
-    printf("\tColunas (colocar valor entre 6 e 10) > ");
-    scanf("%d", col);
-  } while(*col < 6 || *col > 10);
+  if ( LOAD == TRUE ){
+    save = fopen("save.dat", "r+");
 
-  while(*rows > *col){
-    system(CLEAR);
-    printf("\n\n\n\n");
-    printf("\n\tO numero de colunas deve ser maior que o numero de linhas \n\n");
-    getDimensions(rows, col);
+    if( save == NULL ) {
+      printf("Erro no acesso ao ficheiro\n");
+      return; }
+
+
+    while ( feof(save) == 0 ) {
+      fread(&tmp_rows,sizeof(tmp_rows),1,save);
+      fread(&tmp_columns,sizeof(tmp_columns),1,save);
+      fread(&player, sizeof(player),1,save);
+      fread(&letter,sizeof(letter),1,save);
+      fread(&number,sizeof(number),1,save);
+    }
+    *rows = tmp_rows ;
+    *columns = tmp_columns ;
+    player = tmp_player;
+  }
+
+  else{
+    do {
+      printf("\tLinhas (colocar valor entre 4 e 8) > " );
+      scanf("%d", rows );
+    } while(*rows < 4 || *rows  > 8);
+
+    do {
+      printf("\tColunas (colocar valor entre 6 e 10) > ");
+      scanf("%d", columns);
+    } while(*columns < 6 || *columns > 10);
+
+    while(*rows > *columns){
+      system(CLEAR);
+      printf("\n\n\n\n");
+      printf("\n\tO numero de colunas deve ser maior que o numero de linhas \n\n");
+      getDimensions(rows, columns,LOAD, save, player, letter, number);
+    }
   }
 
 }
@@ -178,24 +225,12 @@ int playMenu(int * menu_op, int player){
   printf("\t\t+ 1- Fazer jogada            +\n" );
   printf("\t\t+ 2- Aumentar o tabuleiro    +\n");
   printf("\t\t+ 3- Ver jogadas anteriores  +\n");
-  printf("\t\t+ 4- Sair                    +\n");
+  printf("\t\t+ 4- Sair e guardar          +\n");
   printf("\t\t+-+-+-+-+-+-+-+-++-+-+-+-+-+-+\n");
   printf("\n");
   printf("\tOpção >> ");
   scanf("%d",menu_op);
-
 }
-/*int **re_allocMem(int ** board, int nrows, int ncolumns){
-  board = realloc( board, (nrows + 1) * sizeof(int *));
-  for(int i = 0; i < nrows + 1 ; i++)
-    board[i] = realloc(board, (ncolumns + 1) * sizeof(int));
-    if (board == NULL) {
-      printf("\t\nERROR::memory allocation\n\n" );
-      free(board);
-      return 0 ;
-      }
-    }
-*/
 void getPlay(char *letter, int* number, int player){
   printf("\n  ::Jogador %d::  \n",player );
   printf("\tJogada (Exemplo - A1) > " );
@@ -224,18 +259,37 @@ void makePlay(int **board, int nrows, int ncolumns, char letter, int number, int
     }
   }
 }
-/*void makeLoad(int player, char letter, int number){
-    FILE *f;
-    f = fopen("save.bin", "wb");
+void makeLoad(int player,int nrows, int ncolumns ,FILE *f,char letter, int number){
+
+    f = fopen("save.dat", "a+");
     if( f==NULL ) {
       printf("Erro no acesso ao ficheiro\n");
-      return 0; }
-    fwrite(player,sizeof(int),1,f);
-    fwrite(letter,sizeof(char),1,f);
-    fwrite(number,sizeof(int),1,f);
+      return ; }
+    fwrite(&nrows,sizeof(nrows),1,f);
+    fwrite(&ncolumns,sizeof(ncolumns),1,f);
+    fwrite(&player,sizeof(player),1,f);
+    fwrite(&letter,sizeof(letter),1,f);
+    fwrite(&number,sizeof(number),1,f);
+
     fclose(f);
   }
-*/
+void loadGame(int player,char letter, int number, FILE *f, int **board, int nrows, int ncolumns) {
+  f = fopen("save.dat", "r+");
+
+  if( f==NULL ) {
+    printf("Erro no acesso ao ficheiro\n");
+    return ; }
+
+    while (feof(f) == 0) {
+      fread(&nrows,sizeof(nrows),1,f);
+      fread(&ncolumns,sizeof(ncolumns),1,f);
+      fread(&player, sizeof(player),1,f);
+      fread(&letter,sizeof(letter),1,f);
+      fread(&number,sizeof(number),1,f);
+
+      makePlay(board, nrows, ncolumns, letter, number, player);
+    }
+  }
 void savePlay(int **board, int nrows, int ncolumns, char letter, int number, int nplays ,int player){
   FILE *f;
    f = fopen("save.txt", "a+");
@@ -270,24 +324,24 @@ void savePlay(int **board, int nrows, int ncolumns, char letter, int number, int
 }
 pmov prevMoves( char letter, int number, int player){
 
-    pmov newNode = malloc(sizeof(struct game_info));
-    newNode->player = player;
-    newNode->letter = letter;
-    newNode->number = number;
-    newNode->prox = NULL;
+    pmov list = malloc(sizeof(struct game_info));
+    list->player = player;
+    list->letter = letter;
+    list->number = number;
+    list->prox = NULL;
 
-    return newNode;
+    return list;
 }
 pmov addMove( pmov list, char letter, int number, int player){
-  pmov addNode = malloc(sizeof(struct game_info));
-  list->prox = addNode;
-  addNode->player = player;
-  addNode->letter = letter;
-  addNode->number = number;
-  addNode->prox = NULL;
 
-  return addNode;
+  pmov new_Node = malloc(sizeof(struct game_info));
+  list->prox = new_Node;
+  new_Node->player = player;
+  new_Node->letter = letter;
+  new_Node->number = number;
+  new_Node->prox = NULL;
 
+  return new_Node;
 }
 void show_prevMoves(pmov p){
   if ( p == NULL) {
